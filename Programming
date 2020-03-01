@@ -1,0 +1,19 @@
+Guess The Number Game
+
+from random import randint
+answer = randint(1, 10)
+
+while True:
+    try:
+        guess = int(input("guess a number from 1~10: "))
+
+        if 0 < guess < 11:
+            if guess == answer:
+                print("You are good!")
+            break
+        else:
+            print("Nonsense!, I said one to ten")
+
+    except ValueError:
+        print("please enter a number")
+        continue
